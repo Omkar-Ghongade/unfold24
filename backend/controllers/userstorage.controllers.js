@@ -60,7 +60,7 @@ export const update_coins = async (req, res) => {
         console.log(req.body.email);
         const user = await userStorage.findOne({email: req.body.email});
         user.coin += req.body.coin;
-        user.quantity = req.body.quantity;
+        // user.quantity = req.body.quantity;
         user.save();
         console.log(user);
         res.status(200).json(user);
