@@ -74,6 +74,18 @@ function HomePage() {
         // Fetching user details
         
         console.log("User details fetched:", details.email);
+        const portfolioDataa = await getPortfolio();
+        console.log(portfolioDataa);
+        // console
+        const response = await fetch('http://localhost:3001/userstorage/updateprof', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email: details.email , coin : portfolioDataa.tokens[0].quantity }),
+        });
+        const data = await response.json();
+        console.log('Data:', data);
 
         // Fetch user data from the database
         const userResponse = await fetch('http://localhost:3001/userstorage/getuser', {
@@ -208,7 +220,7 @@ function HomePage() {
           <div className="text-white text-left space-y-2">
             <p><span className="font-semibold">Email:</span> {userdb.email }</p>
             <p><span className="font-semibold">Quantity:</span> {userdb.coin } Magic Aptos</p>
-            <p><span className="font-semibold">Coin:</span> {userdb.quantity } APT</p>
+            <p><span className="font-semibold">Quantit:</span> {userdb.quantity } APT</p>
           </div>
         </div>
       </div>

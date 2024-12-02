@@ -11,7 +11,7 @@ import './index.css';
 import Navbar from './navbar';
 import Chat from './Chat';
 
-const OKTO_CLIENT_API_KEY = "3c90ac0a-7bc0-4eef-a7c2-f725bcb240cf";
+const OKTO_CLIENT_API_KEY = "ff4a2b62-377f-4320-b650-5e1079dce8ba";
 
 
 function App() {

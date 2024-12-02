@@ -26,8 +26,9 @@ export const get_deck = async (req, res) => {
 
 export const user = async (req, res) => {
     try{
-        // console.log(req.body.address);
+        console.log(req.body.address);
         const user = await userStorage.findOne({address:req.body.address});
+        console.log(user);
         if(user===null){
             const User = new userStorage({
                 email: req.body.emailid,
@@ -41,6 +42,17 @@ export const user = async (req, res) => {
             user.quantity = req.body.quantity;
             user.save();
         }
+    }catch(err){
+        console.log(err);
+    }
+}
+
+export const updateprof = async (req, res) =>{
+    try{
+        const user = await userStorage.findOne({email:req.body.email});
+        user.quantity = req.body.coin;
+        user.save();
+        res.status(200).json(user);
     }catch(err){
         console.log(err);
     }
