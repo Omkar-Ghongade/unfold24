@@ -208,7 +208,7 @@ function HomePage() {
           <div className="text-white text-left space-y-2">
             <p><span className="font-semibold">Email:</span> {userdb.email }</p>
             <p><span className="font-semibold">Quantity:</span> {userdb.coin } Magic Aptos</p>
-            <p><span className="font-semibold">Quantit:</span> {userdb.quantity } APT</p>
+            <p><span className="font-semibold">Coin:</span> {userdb.quantity } APT</p>
           </div>
         </div>
       </div>
