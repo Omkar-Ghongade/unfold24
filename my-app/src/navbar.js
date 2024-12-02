@@ -55,7 +55,7 @@ function Navbar() {
         <img
           src={logo}
           alt="Logo"
-          style={{ width: '120px', height: 'auto', borderRadius: '10px' }}
+          style={{ width: '150px', height: 'auto', borderRadius: '10px' }}
         />
       </div>
 

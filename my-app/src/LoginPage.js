@@ -44,7 +44,7 @@ function LoginPage() {
     // Outer div with a static grey background and Poppins font
     <div className=" bg-blur mx-auto flex items-center justify-center font-poppins">
       {/* Flex container for image and form */}
-      <div className="flex  mx-auto mt-32 mb-9 max-w-4xl p-0 rounded-lg shadow-xl hover:shadow-b-2xl hover:shadow-deepPurple transition-shadow duration-300 ease-in-out">
+      <div className="flex  mx-auto mt-32 mb-12 max-w-4xl p-0 rounded-lg shadow-md hover:shadow-xl hover:shadow-deepPurple transition-shadow duration-300 ease-in-out">
 
 
         {/* Left side - Image */}
@@ -53,7 +53,7 @@ function LoginPage() {
         </div>
 
         {/* Right side - Login form */}
-        <div className="bg-darkPurple p-8 rounded-r-lg shadow-xl w-full md:w-1/2 flex flex-col justify-between h-full mx-auto">
+        <div className="bg-darkPurple p-8 rounded-r-lg shadow-lg w-full md:w-1/2 flex flex-col justify-between h-full mx-auto">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img src={logo} alt="MagicChain Logo" className="h-12 mb-4" />
