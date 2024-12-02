@@ -31,7 +31,7 @@ return (
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/arena" element={<Betting />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/market" element={<Shop />} />
         <Route path="/order" element={<Order />} />
         <Route path="/transact" element={<Transact />} />
         <Route path="/chat" element={<Chat/>} />

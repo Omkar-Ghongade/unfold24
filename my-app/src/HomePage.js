@@ -55,20 +55,21 @@ function HomePage() {
         console.log("Wallets created:", walletsData.wallets[1].address);
         console.log("Portfolio fetched:", portfolio.tokens[0].quantity);
         const details = await getUserDetails();
+        console.log(details.email)
         // Storing user details in the database
-        const addUserResponse = await fetch('http://localhost:3001/userstorage/user', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            emailid: details.email,
-            address: walletsData.wallets[1].address,
-            quantity: portfolio.tokens[0].quantity,
-          }),
-        });
-        const addUserData = await addUserResponse.json();
-        console.log('User added:', addUserData);
+        // const addUserResponse = await fetch('http://localhost:3001/userstorage/user', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify({
+        //     emailid: details.email,
+        //     address: walletsData.wallets[1].address,
+        //     quantity: portfolio.tokens[0].quantity,
+        //   }),
+        // });
+        // const addUserData = await addUserResponse.json();
+        // console.log('User added:', addUserData);
 
         // Fetching user details
         
@@ -205,10 +206,10 @@ function HomePage() {
         />
 </div>
           <div className="text-white text-left space-y-2">
-            <p><span className="font-semibold">Name:</span> {userdb.email || "Chill Guy"}</p>
-            <p><span className="font-semibold">Email:</span> {userdb.email || "chillguy@gmail.com"}</p>
-            <p><span className="font-semibold">Address:</span> {userdb.address || "0x1234567890abcdef"}</p>
-            <p><span className="font-semibold">Quantity:</span> {userdb.quantity || "3"}</p>
+            <p><span className="font-semibold">Email:</span> {userdb.email }</p>
+            <p><span className="font-semibold">Address:</span> {userdb.address } APT</p>
+            <p><span className="font-semibold">Quantity:</span> {userdb.coin } Magic Aptos</p>
+            <p><span className="font-semibold">Quantit:</span> {userdb.quantity } APT</p>
           </div>
         </div>
       </div>
