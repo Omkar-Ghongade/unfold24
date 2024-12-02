@@ -62,5 +62,14 @@ Use your accumulated Magic Aptos to redeem exciting rewards such as:
 ### **Setup and Installation**  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+   git clone https://github.com/Omkar-Ghongade/unfold24.git
+   cd unfold24
+
+2. Install Node Modules in Backend and Frontend:  
+   ```bash
+   npm i
+
+3. Start Backend and Frontend:  
+   ```bash
+   npm start ( Frontend )
+   npm run dev ( Backend )
