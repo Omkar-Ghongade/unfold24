@@ -126,12 +126,15 @@ export default function Game() {
       alert("Insufficient balance");
       return;
     }
+    const token = JSON.parse(localStorage.getItem('AUTH_DETAILS'));
+    console.log(token.authToken);
     const url = 'https://sandbox-api.okto.tech/api/v1/transfer/tokens/execute';
     const options = {
       method: 'POST',
-      headers: {Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2luZGN4X2lkIjoiMDUzMWM5ZmMtNTgyYS00NDI2LWFhYjgtNjhkMzA3OTJkZDYzIiwidXNlcl9pZCI6IjA1MzFjOWZjLTU4MmEtNDQyNi1hYWI4LTY4ZDMwNzkyZGQ2MyIsInNoYXJlZF9pZCI6bnVsbCwiZGN4X2NyZWF0ZWRfYXQiOm51bGwsInBvcnRmb2xpb0ZhY3RvciI6IjEiLCJhY2NUeXBlIjoid2ViMyIsImFjY291bnRfb3duZXJfaWQiOiJjNTcwMzA0Yi1hOTkwLTVkMGMtYTViZi1hYTI5ODk0ZjQ4MTciLCJzZXNzaW9uSWQiOiJiZWQxY2NlZS03MDAzLTRkMTAtYWZmNi1hNDAzMzFjYTYyMDgiLCJ1c2VyX2xvZ2luX3ZlbmRvcl9pZCI6IjVmOTQxMDYzLTRjMDMtNGUwYi1iNWE4LTE0NjRhMDQ2YzJiNiIsInMiOiJ3ZWIiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoTGludXg7IEFuZHJvaWQgMTM7IFBpeGVsIDcpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMTYuMC4wLjAgTW9iaWxlIFNhZmFyaS81MzcuMzYiLCJzaXAiOiIyMTkuNjUuMTEwLjIyMiIsInNjaXR5IjoiQmVuZ2FsdXJ1Iiwic2NvdW50cnkiOiJJTiIsInNyZWdpb24iOiJLQSIsImxvZ2luX21lZGl1bSI6IkdfQVVUSCIsImlhdCI6MTczMzA5MTI4NiwiZXhwIjoxNzMzOTU1Mjg2fQ.zb6Us25tCW7VGzg9AIFT5_2K5M9Wwcls_HQBeblaFH8', 'Content-Type': 'application/json'},
+      headers: {Authorization: `Bearer ${token.authToken}`, 'Content-Type': 'application/json'},
       body: `{"network_name":"APTOS_TESTNET","token_address":"","quantity": "1","recipient_address":"0x1e0490dc9eaacd3a95a577f9d700501e490792480c9d7a83e1583fb86f960383"}`
     };
+    console.log(options)
     try {
       const response = await fetch(url, options);
       const data = await response.json();

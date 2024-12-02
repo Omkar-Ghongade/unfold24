@@ -66,8 +66,8 @@ function Navbar() {
             <button onClick={() => navigate("/home")} className="flex items-center space-x-3 hover:text-lavender">
               <FaHome /> <h3>Home</h3>
             </button>
-            <button onClick={() => navigate("/profile")} className="flex items-center space-x-3 hover:text-lavender">
-              <FaUserAlt /> <h3>Profile</h3>
+            <button onClick={() => navigate("/chat")} className="flex items-center space-x-3 hover:text-lavender">
+              <FaUserAlt /> <h3>Chat</h3>
             </button>
             <button onClick={() => navigate("/market")} className="flex items-center space-x-3 hover:text-lavender">
               <FaShoppingCart /> <h3>Market</h3>

@@ -9,6 +9,7 @@ import Order from './Order';
 import Transact from './Transact';
 import './index.css';
 import Navbar from './navbar';
+import Chat from './Chat';
 
 const OKTO_CLIENT_API_KEY = "3c90ac0a-7bc0-4eef-a7c2-f725bcb240cf";
 
@@ -33,6 +34,7 @@ return (
         <Route path="/shop" element={<Shop />} />
         <Route path="/order" element={<Order />} />
         <Route path="/transact" element={<Transact />} />
+        <Route path="/chat" element={<Chat/>} />
       </Routes>
       
     </OktoProvider>
